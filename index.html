@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pac-man</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="hud">
+      <div class="info">
+        <h1>Pac‑Mam</h1>
+        <div class="score">Pontuação: <span id="score">0</span></div>
+        <div class="level">Fase: <span id="level">1</span></div>
+      </div>
+      <div class="actions">
+        <label for="level-select">Fase inicial:</label>
+        <select id="level-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button id="set-level">Aplicar</button>
+        <button id="restart">Reiniciar</button>
+      </div>
+    </header>
+
+    <main class="game-area">
+      <div class="grid" aria-label="tabuleiro do jogo"></div>
+      <div class="controls" id="touch-controls">
+        <button class="up">▲</button>
+        <div class="mid">
+          <button class="left">◀</button>
+          <button class="down">▼</button>
+          <button class="right">▶</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="legend">Use setas do teclado ou controles touch</footer>
+
+    <div id="message" class="message-overlay" aria-hidden="true">
+      <div class="message-box">
+        <h2 id="message-text"></h2>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
